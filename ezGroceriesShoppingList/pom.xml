@@ -11,8 +11,8 @@
     <groupId>com.ezgroceries</groupId>
     <artifactId>shopping-list</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>shopping-list</name>
-    <description>cloud native practical case</description>
+    <name>ezGroceriesShoppingList</name>
+    <description>ezGroceriesShoppingList</description>
     <properties>
         <java.version>11</java.version>
     </properties>
