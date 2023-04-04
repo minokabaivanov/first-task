@@ -16,6 +16,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.ezgroceries.shoppinglist.util.TestData.*;
@@ -66,10 +67,13 @@ public class WebControllerTests {
                 "Cocktail glass",
                 "Rub rim of cocktail glass with lime juice. Dip rim in coarse salt..",
                 "https://www.thecocktaildb.com/images/media/drink/qtvvyq1439905913.jpg",
-                new String[]{"Tequila",
-                        "Blue Curacao",
-                        "Lime juice",
-                        "Salt"});
+                new ArrayList() {
+                    {
+                        add("Tequila");
+                        add("Blue Curacao");
+                        add("Lime juice");
+                        add("Salt");
+                    }});
 
         when(cocktailService.findCocktailById(testId)).thenReturn(testCocktail);
         Mockito.verify(cocktailService, times(0)).findCocktailById(testId);

@@ -32,7 +32,6 @@ public class WebController {
         List<Cocktail> cocktails = cocktailService.listCocktails(search);
         log.info("List of cocktails compiled");
         return cocktails;
-
     }
 
     @PostMapping("/shopping-list")
@@ -50,18 +49,15 @@ public class WebController {
 
     @PostMapping("/shopping-lists/{shoppingListId}/cocktails")
     public ResponseEntity<ShoppingList> addCocktailToShoppingList(@RequestBody Cocktail cocktail, @PathVariable("shoppingListId") String shoppingListId) {
-        String cocktailId = cocktail.getCocktailId();
-        ShoppingList shoppingList = shoppingListService.addCocktailToShoppingList(shoppingListId, cocktailId);
-        log.info("Successfully added a cocktail " + cocktailId + " to shopping list " + shoppingListId);
+        ShoppingList shoppingList = shoppingListService.addCocktailToShoppingList(shoppingListId, cocktail.getCocktailId());
+        log.info("Successfully added a cocktail " + cocktail.getCocktailId() + " to shopping list " + shoppingListId);
         return buildResponseEntity(shoppingList);
     }
 
     @GetMapping("/shopping-lists")
-    @ResponseBody
     public List<ShoppingList> getAllShoppingLists() {
         List<ShoppingList> shoppingLists = shoppingListService.findAllShoppingLists();
         return shoppingLists;
-
     }
 
     private ResponseEntity<ShoppingList> buildResponseEntity(ShoppingList shoppingList) {

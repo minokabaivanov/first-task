@@ -4,6 +4,8 @@ import com.ezgroceries.shoppinglist.entity.Cocktail;
 import com.ezgroceries.shoppinglist.entity.ShoppingList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -30,20 +32,24 @@ public class ShoppingListServiceImpl implements ShoppingListService {
     public List<ShoppingList> findAllShoppingLists() {
         ShoppingList firstShoppingList = new ShoppingList("4ba92a46-1d1b-4e52-8e38-13cd56c7224c",
                 "Stephanie's birthday",
-                new String[]{
-                        "Tequila",
-                        "Triple sec",
-                        "Lime juice",
-                        "Salt",
-                        "Blue Curacao"});
+                new ArrayList(){{
+                    add("Tequila");
+                    add("Triple sec");
+                    add("Blue Curacao");
+                    add("Lime juice");
+                    add("Salt");
+                }
+                });
         ShoppingList secondShoppingList = new ShoppingList("6c7d09c2-8a25-4d54-a979-25ae779d2465",
                 "My Birthday",
-                new String[]{
-                        "Tequila",
-                        "Triple sec",
-                        "Lime juice",
-                        "Salt",
-                        "Blue Curacao"});
+                new ArrayList(){{
+                    add("Tequila");
+                    add("Triple sec");
+                    add("Blue Curacao");
+                    add("Lime juice");
+                    add("Salt");
+                }
+                });
         List<ShoppingList> shoppingLists = List.of(firstShoppingList, secondShoppingList);
         return shoppingLists;
     }
