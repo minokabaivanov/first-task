@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface CocktailService {
 
-    List<Cocktail> listCocktails(String search);
+    List<Cocktail> getCocktails(String search);
 
     Cocktail findCocktailById(String cocktailId);
 }

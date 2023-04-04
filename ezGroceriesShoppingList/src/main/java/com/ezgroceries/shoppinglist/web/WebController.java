@@ -4,6 +4,7 @@ import com.ezgroceries.shoppinglist.entity.Cocktail;
 import com.ezgroceries.shoppinglist.entity.ShoppingList;
 import com.ezgroceries.shoppinglist.service.CocktailService;
 import com.ezgroceries.shoppinglist.service.ShoppingListService;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,14 +13,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-
+@Slf4j
 public class WebController {
-
-    private static final Logger log = LoggerFactory.getLogger(WebController.class);
-
 
     @Autowired
     private CocktailService cocktailService;
@@ -27,15 +26,14 @@ public class WebController {
     private ShoppingListService shoppingListService;
 
     @GetMapping("/cocktails")
-    @ResponseBody
     public List<Cocktail> getCocktails(@RequestParam String search) {
-        List<Cocktail> cocktails = cocktailService.listCocktails(search);
+        List<Cocktail> cocktails = cocktailService.getCocktails(search);
         log.info("List of cocktails compiled");
         return cocktails;
     }
 
     @PostMapping("/shopping-list")
-    public ResponseEntity<ShoppingList> createShoppingList(@RequestBody ShoppingList shoppingList) {
+    public ResponseEntity<ShoppingList> createShoppingList(@Valid @RequestBody ShoppingList shoppingList) {
         log.info("Successfully created a shopping list");
         return buildResponseEntity(shoppingList);
     }
@@ -48,7 +46,7 @@ public class WebController {
     }
 
     @PostMapping("/shopping-lists/{shoppingListId}/cocktails")
-    public ResponseEntity<ShoppingList> addCocktailToShoppingList(@RequestBody Cocktail cocktail, @PathVariable("shoppingListId") String shoppingListId) {
+    public ResponseEntity<ShoppingList> addCocktailToShoppingList(@Valid @RequestBody Cocktail cocktail, @PathVariable("shoppingListId") String shoppingListId) {
         ShoppingList shoppingList = shoppingListService.addCocktailToShoppingList(shoppingListId, cocktail.getCocktailId());
         log.info("Successfully added a cocktail " + cocktail.getCocktailId() + " to shopping list " + shoppingListId);
         return buildResponseEntity(shoppingList);

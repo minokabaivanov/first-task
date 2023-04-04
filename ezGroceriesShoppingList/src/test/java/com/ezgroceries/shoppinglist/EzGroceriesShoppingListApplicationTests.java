@@ -10,18 +10,4 @@ import org.springframework.web.context.WebApplicationContext;
 
 @SpringBootTest
 class EzGroceriesShoppingListApplicationTests {
-
-    private MockMvc mockMvc;
-    @Autowired
-    private WebApplicationContext context;
-
-    @Before
-    private void setUp() {
-        mockMvc = MockMvcBuilders.webAppContextSetup(context).build();
-    }
-
-    @Test
-    void contextLoads() {
-    }
-
 }

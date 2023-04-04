@@ -41,7 +41,7 @@ public class TestData {
         };
     }
 
-    public static ShoppingList addCocktailToShoppingList() {
+    public static ShoppingList getShoppingListWithAddedCocktail() {
         return new ShoppingList(
                 "Test1",
                 "Blue Margerita",
@@ -55,7 +55,7 @@ public class TestData {
                 );
     }
 
-    public static List<ShoppingList> allShoppingLists() {
+    public static List<ShoppingList> getAllShoppingLists() {
         ShoppingList firstShoppingList = new ShoppingList("4ba92a46-1d1b-4e52-8e38-13cd56c7224c",
                 "Stephanie's birthday",
                 new ArrayList(){{

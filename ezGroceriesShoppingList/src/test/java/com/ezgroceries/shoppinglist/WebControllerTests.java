@@ -4,6 +4,7 @@ import com.ezgroceries.shoppinglist.entity.Cocktail;
 import com.ezgroceries.shoppinglist.entity.ShoppingList;
 import com.ezgroceries.shoppinglist.service.CocktailServiceImpl;
 import com.ezgroceries.shoppinglist.service.ShoppingListService;
+import com.ezgroceries.shoppinglist.util.TestData;
 import com.ezgroceries.shoppinglist.web.WebController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -48,14 +49,14 @@ public class WebControllerTests {
     public void testListAllCocktails() throws Exception {
         List<Cocktail> cocktailList = getCocktailList();
 
-        when(cocktailService.listCocktails(eq("test"))).thenReturn(cocktailList);
+        when(cocktailService.getCocktails(eq("test"))).thenReturn(cocktailList);
 
         mockMvc.perform(get("/cocktails?search=test"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$[0].name").value("Margerita"));
 
-        Mockito.verify(cocktailService, times(1)).listCocktails("test");
+        Mockito.verify(cocktailService, times(1)).getCocktails("test");
     }
 
     //Ignore the method below. It doesn't do anything. I created it before I realized that there is no direct way to test this method by url
@@ -102,7 +103,7 @@ public class WebControllerTests {
         var contentAsString = resourceToString("/Cocktails.json");
 
         Mockito.when(shoppingListService.addCocktailToShoppingList("Test1", "23b3d85a-3928-41c0-a533-6538a71e17c4"))
-                .thenReturn(addCocktailToShoppingList());
+                .thenReturn(getShoppingListWithAddedCocktail());
         mockMvc.perform(post("/shopping-lists/" + shoppingListId + "/cocktails")
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON)
@@ -118,7 +119,7 @@ public class WebControllerTests {
     @Test
     public void getAllShoppingLists() throws Exception {
 
-        Mockito.when(shoppingListService.findAllShoppingLists()).thenReturn(allShoppingLists());
+        Mockito.when(shoppingListService.findAllShoppingLists()).thenReturn(TestData.getAllShoppingLists());
 
         mockMvc.perform(get("/shopping-lists"))
                 .andExpectAll(

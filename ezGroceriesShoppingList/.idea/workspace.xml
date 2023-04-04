@@ -9,10 +9,11 @@
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/entity/Cocktail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/entity/Cocktail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/entity/ShoppingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/entity/ShoppingList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/service/CocktailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/service/CocktailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/service/CocktailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/service/CocktailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/service/ShoppingListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/service/ShoppingListServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/util/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/util/TestData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/web/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/web/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ezgroceries/shoppinglist/EzGroceriesShoppingListApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ezgroceries/shoppinglist/EzGroceriesShoppingListApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/ezgroceries/shoppinglist/WebControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ezgroceries/shoppinglist/WebControllerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +177,7 @@
       <updated>1679916828663</updated>
       <workItem from="1679916829984" duration="40513000" />
       <workItem from="1680164955808" duration="29296000" />
-      <workItem from="1680502795726" duration="7262000" />
+      <workItem from="1680502795726" duration="10083000" />
     </task>
     <task id="LOCAL-00001" summary="lab-01-springboot">
       <created>1679917285088</created>
@@ -211,11 +212,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/service/CocktailServiceImpl.java</url>
           <line>13</line>
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/web/WebController.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -10,7 +10,7 @@ import java.util.List;
 public class CocktailServiceImpl implements CocktailService {
 
     @Override
-    public List<Cocktail> listCocktails(String search) {
+    public List<Cocktail> getCocktails(String search) {
         Cocktail firstCocktail = new Cocktail(
                 "23b3d85a-3928-41c0-a533-6538a71e17c4",
                 "Margerita",

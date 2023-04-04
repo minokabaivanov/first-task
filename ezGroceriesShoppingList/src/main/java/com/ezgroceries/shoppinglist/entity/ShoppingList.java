@@ -2,6 +2,7 @@ package com.ezgroceries.shoppinglist.entity;
 
 import lombok.*;
 
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,13 +14,12 @@ import java.util.List;
 @Setter
 public class ShoppingList {
 
+    @NotNull(message="field shoppingListId can not be null")
     private String shoppingListId;
+    @NotNull(message="field name can not be null")
     private String name;
     private ArrayList ingredients;
 
-    public ShoppingList(String name) {
-        this.name = name;
-    }
 
     public ShoppingList(String shoppingListId, String name) {
         this.shoppingListId = shoppingListId;
