@@ -1,44 +1,37 @@
 package com.ezgroceries.shoppinglist.util;
 
-import com.ezgroceries.shoppinglist.entity.Cocktail;
+import com.ezgroceries.shoppinglist.entity.DrinkResource;
 import com.ezgroceries.shoppinglist.entity.ShoppingList;
+import com.ezgroceries.shoppinglist.repository.CocktailDBResponse;
 
 import java.util.*;
 
 public class TestData {
 
-    public static ArrayList<Cocktail> getCocktailList() {
-        Cocktail firstCocktail = new Cocktail(
-                "23b3d85a-3928-41c0-a533-6538a71e17c4",
-                "Margerita",
-                "Cocktail glass",
-                "Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten..",
-                "https://www.thecocktaildb.com/images/media/drink/wpxpvu1439905379.jpg",
-                new ArrayList() {
-                    {
-                        add("Tequila");
-                        add("Blue Curacao");
-                        add("Lime juice");
-                        add("Salt");
-                    }});
-                    Cocktail secondCocktail = new Cocktail(
-                            "d615ec78-fe93-467b-8d26-5d26d8eab073",
-                            "Blue Margerita",
-                            "Cocktail glass",
-                            "Rub rim of cocktail glass with lime juice. Dip rim in coarse salt..",
-                            "https://www.thecocktaildb.com/images/media/drink/qtvvyq1439905913.jpg",
-                            new ArrayList() {
-                                {
-                                    add("Tequila");
-                                    add("Blue Curacao");
-                                    add("Lime juice");
-                                    add("Salt");
-                                }});
-        return new ArrayList<>() {{
-                add(firstCocktail);
-                add(secondCocktail);
-            }
-        };
+    public static CocktailDBResponse getCocktailList() {
+
+        DrinkResource drinkResource1=new DrinkResource(
+                "11102",
+                "Black Russian",
+                "Old-fashioned glass",
+                "Pour the ingredients into an old fashioned glass filled with ice cubes. Stir gently.",
+                "https://www.thecocktaildb.com/images/media/drink/8oxlqf1606772765.jpg",
+                "Coffee liqueur",
+                "Vodka",
+                null
+                );
+        DrinkResource drinkResource2=new DrinkResource(
+                "12528",
+                "White Russian",
+                "Old-fashioned glass",
+                "Pour vodka and coffee liqueur over ice cubes in an old-fashioned glass. Fill with light cream and serve.",
+                "https://www.thecocktaildb.com/images/media/drink/vsrupw1472405732.jpg",
+                "Vodka",
+                "Coffee liqueur",
+                "Light cream"
+        );
+        return new CocktailDBResponse(List.of(drinkResource1,drinkResource2));
+
     }
 
     public static ShoppingList getShoppingListWithAddedCocktail() {

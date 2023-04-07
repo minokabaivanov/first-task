@@ -5,6 +5,7 @@ import com.ezgroceries.shoppinglist.entity.ShoppingList;
 import com.ezgroceries.shoppinglist.service.CocktailServiceImpl;
 import com.ezgroceries.shoppinglist.service.ShoppingListService;
 import com.ezgroceries.shoppinglist.util.TestData;
+import com.ezgroceries.shoppinglist.web.CocktailDBClient;
 import com.ezgroceries.shoppinglist.web.WebController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,16 +19,17 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import static com.ezgroceries.shoppinglist.util.TestData.*;
+import static com.ezgroceries.shoppinglist.util.TestData.getCocktailList;
+import static com.ezgroceries.shoppinglist.util.TestData.getShoppingListWithAddedCocktail;
 import static com.ezgroceries.shoppinglist.util.TestHelperMethods.resourceToString;
-import static org.hamcrest.Matchers.hasSize;
 import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(WebController.class)
@@ -36,49 +38,30 @@ public class WebControllerTests {
 
 
     @MockBean
-    CocktailServiceImpl cocktailService;
+    private CocktailServiceImpl cocktailService;
 
     @MockBean
-    ShoppingListService shoppingListService;
+    private CocktailDBClient cocktailDBClient;
+    @MockBean
+    private ShoppingListService shoppingListService;
 
     @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
-    MockMvc mockMvc;
+    private MockMvc mockMvc;
 
     @Test
     public void testListAllCocktails() throws Exception {
-        List<Cocktail> cocktailList = getCocktailList();
 
-        when(cocktailService.getCocktails(eq("test"))).thenReturn(cocktailList);
+        when(cocktailDBClient.searchCocktails(eq("test"))).thenReturn(getCocktailList());
 
         mockMvc.perform(get("/cocktails?search=test"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(2)))
-                .andExpect(jsonPath("$[0].name").value("Margerita"));
+                .andExpect(jsonPath("$").isMap())
+                .andExpect(jsonPath("$.drinks[0].idDrink").value("11102"));
 
-        Mockito.verify(cocktailService, times(1)).getCocktails("test");
+        Mockito.verify(cocktailDBClient, times(1)).searchCocktails("test");
     }
 
-    //Ignore the method below. It doesn't do anything. I created it before I realized that there is no direct way to test this method by url
-    @Test
-    public void testFindCocktailById() {
-        String testId = "Test";
-        Cocktail testCocktail = new Cocktail(testId,
-                "Blue Margerita",
-                "Cocktail glass",
-                "Rub rim of cocktail glass with lime juice. Dip rim in coarse salt..",
-                "https://www.thecocktaildb.com/images/media/drink/qtvvyq1439905913.jpg",
-                new ArrayList() {
-                    {
-                        add("Tequila");
-                        add("Blue Curacao");
-                        add("Lime juice");
-                        add("Salt");
-                    }});
-
-        when(cocktailService.findCocktailById(testId)).thenReturn(testCocktail);
-        Mockito.verify(cocktailService, times(0)).findCocktailById(testId);
-    }
 
     @Test
     public void testFindShoppingListById() throws Exception {
