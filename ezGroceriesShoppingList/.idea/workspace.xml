@@ -4,17 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="924fd843-9076-4130-a8f8-166f15fc00f5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="924fd843-9076-4130-a8f8-166f15fc00f5" name="Changes" comment="lab-01-springboot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/ezgroceries/shoppinglist/EzGroceriesShoppingListApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/entity/Cocktail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/entity/Cocktail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/entity/ShoppingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/entity/ShoppingList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/service/CocktailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/service/CocktailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/service/CocktailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/service/CocktailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/util/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/util/TestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/web/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/web/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ezgroceries/shoppinglist/EzGroceriesShoppingListApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ezgroceries/shoppinglist/EzGroceriesShoppingListApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ezgroceries/shoppinglist/WebControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ezgroceries/shoppinglist/WebControllerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -34,20 +47,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;082c0f2fa2e1e04d9d06c84e26555f82&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.EzGroceriesShoppingListApplicationTests">
-    <configuration name="EzGroceriesShoppingListApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.ezgroceries.shoppinglist.entity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.EzGroceriesShoppingListApplication">
+    <configuration name="WebControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shopping-list" />
       <extension name="coverage">
         <pattern>
@@ -56,8 +80,72 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ezgroceries.shoppinglist" />
-      <option name="MAIN_CLASS_NAME" value="com.ezgroceries.shoppinglist.EzGroceriesShoppingListApplicationTests" />
+      <option name="MAIN_CLASS_NAME" value="com.ezgroceries.shoppinglist.WebControllerTests" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebControllerTests.getAllShoppingLists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shopping-list" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ezgroceries.shoppinglist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ezgroceries.shoppinglist" />
+      <option name="MAIN_CLASS_NAME" value="com.ezgroceries.shoppinglist.WebControllerTests" />
+      <option name="METHOD_NAME" value="getAllShoppingLists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebControllerTests.testAddCocktailToShoppingList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shopping-list" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ezgroceries.shoppinglist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ezgroceries.shoppinglist" />
+      <option name="MAIN_CLASS_NAME" value="com.ezgroceries.shoppinglist.WebControllerTests" />
+      <option name="METHOD_NAME" value="testAddCocktailToShoppingList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebControllerTests.testFindCocktailById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shopping-list" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ezgroceries.shoppinglist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ezgroceries.shoppinglist" />
+      <option name="MAIN_CLASS_NAME" value="com.ezgroceries.shoppinglist.WebControllerTests" />
+      <option name="METHOD_NAME" value="testFindCocktailById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebControllerTests.testListAllCocktails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shopping-list" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ezgroceries.shoppinglist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ezgroceries.shoppinglist" />
+      <option name="MAIN_CLASS_NAME" value="com.ezgroceries.shoppinglist.WebControllerTests" />
+      <option name="METHOD_NAME" value="testListAllCocktails" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -71,7 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EzGroceriesShoppingListApplicationTests" />
+        <item itemvalue="JUnit.WebControllerTests" />
+        <item itemvalue="JUnit.WebControllerTests.testListAllCocktails" />
+        <item itemvalue="JUnit.WebControllerTests.testAddCocktailToShoppingList" />
+        <item itemvalue="JUnit.WebControllerTests.getAllShoppingLists" />
+        <item itemvalue="JUnit.WebControllerTests.testFindCocktailById" />
       </list>
     </recent_temporary>
   </component>
@@ -83,11 +175,45 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679916828663</updated>
-      <workItem from="1679916829984" duration="391000" />
+      <workItem from="1679916829984" duration="40513000" />
+      <workItem from="1680164955808" duration="29296000" />
+      <workItem from="1680502795726" duration="10083000" />
     </task>
+    <task id="LOCAL-00001" summary="lab-01-springboot">
+      <created>1679917285088</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679917285088</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="lab-01-springboot" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab-01-springboot" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint type="java-exception">
+          <properties class="com.fasterxml.jackson.databind.exc.InvalidDefinitionException" package="com.fasterxml.jackson.databind.exc" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/service/ShoppingListServiceImpl.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ezgroceries/shoppinglist/service/CocktailServiceImpl.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
